@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="pract7.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:pract7"
+    Shell.FlyoutBehavior="Disabled"
+    Title="pract7">
+
+
+    <TabBar>
+        <Tab Title="Дoбавить">
+            <ShellContent Title="Добавить"  ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage"/>
+        </Tab>
+        <Tab Title="Инфа">
+            <ShellContent Title="Infa" ContentTemplate="{DataTemplate local:NewPage1}"/>
+        </Tab>
+    </TabBar>
+   
+
+</Shell>

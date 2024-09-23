@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pract7.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <StackLayout Margin="0,10,0,10">
+            <Label x:Name="inf" Text=""/>
+            <Label x:Name="fio" Text=""/>
+            <Label x:Name="f" Text=""/>
+            <Label x:Name="i" Text=""/>
+            <Label x:Name="o" Text=""/>
+            <Label x:Name="let" Text=""/>
+            <Label x:Name="fotolb" Text="Ваше фото:" IsVisible="false"/>
+            <Image Source="fotosp.jpg" x:Name="foto" Aspect="AspectFit" IsVisible="false"/>
+            <Label x:Name="obzhaga" Text=""/>
+            <Label x:Name="starosta" Text=""/>
+            <Label x:Name="otcen" Text=""/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
