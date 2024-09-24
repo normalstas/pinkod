@@ -2,18 +2,27 @@ namespace pract7;
 
 public partial class NewPage1 : ContentPage
 {
-	public NewPage1()
+	
+	public NewPage1(ImageData imageData)
 	{
+		
 		InitializeComponent();
 		InitializePickers();
+		if (!string.IsNullOrEmpty(imageData.ImagePath))
+		{
+			imageItem.Source = ImageSource.FromFile(imageData.ImagePath);
+		}
+
 	}
+
+
 
 
 	private void InitializePickers()
 	{
 		
-			
-			string fio1, name1, otchh1, nuzh1;
+		
+		string fio1, name1, otchh1, nuzh1;
 			int age1, ozenka;
 			bool sw11, sw22;
 			fio1 = Save.fio11;
@@ -22,21 +31,15 @@ public partial class NewPage1 : ContentPage
 			nuzh1 = Save.nuzh11;
 			age1 = Save.age11;
 			ozenka = Save.ozenka1;
-			sw11 = Save.sw111;
+			
 			sw22 = Save.sw221;
 			inf.Text = "Поздравляю(докс).Вот информация про вас:";
 			fio.Text = "Ваше ФИО: ";
 			f.Text = fio1;
 			i.Text = name1;
 			o.Text = otchh1;
-
-			let.Text = $"Вам целых {age1}";
-
-			if (sw11)
-			{
-				fotolb.IsVisible = true;
-				foto.IsVisible = true;
-			}
+			
+			let.Text = $"Вам целых {age1} лет";
 
 			if (nuzh1 == "Да")
 			{

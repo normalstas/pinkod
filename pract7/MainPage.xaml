@@ -2,63 +2,71 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pract7.MainPage">
+    <ScrollView >
+        <TableView >
+            <TableRoot>
+                <TableSection Title="Данные" >
+                    <EntryCell x:Name="fio"  Label="Фамилия" Placeholder="Введите фамилию"/>
+                    <EntryCell x:Name="name" Label="Имя" Placeholder="Введите имя"/>
+                    <EntryCell x:Name="otch" Label="Отчество" Placeholder="Введите отчество"/>
 
-    <TableView>
-        <TableRoot>
-            <TableSection Title="Данные">
-                <EntryCell x:Name="fio" Label="Фамилия" Placeholder="Введите фамилию"/>
-                <EntryCell x:Name="name" Label="Имя" Placeholder="Введите имя"/>
-                <EntryCell x:Name="otch" Label="Отчество" Placeholder="Введите отчество"/>
+                    <EntryCell x:Name="age" Label="Возраст" Placeholder="Введите возраст"/>
 
-                <EntryCell x:Name="age" Label="Возраст" Placeholder="Введите возраст"/>
+                    <ViewCell>
+                        <StackLayout>
+                            <Image x:Name="img" WidthRequest="120" HeightRequest="120"/>
+                            
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout>
+                            
+                            <Button Text="Выбрать изображения" Clicked="Button_Clicked_1" />
+                        </StackLayout>
+                    </ViewCell>
 
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Нужно ли фото?"/>
-                        <Switch IsToggled="False"  x:Name="sw"/>
-                    </StackLayout>
-                </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Нужно общежитие?"/>
+                            <Picker Title="Выберите ответ" x:Name="pc1">
+                                <Picker.Items>
+                                    <x:String>Да</x:String>
+                                    <x:String>Нет</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                    </ViewCell>
 
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Нужно общежитие?"/>
-                        <Picker Title="Выберите ответ" x:Name="pc1">
-                            <Picker.Items>
-                                <x:String>Да</x:String>
-                                <x:String>Нет</x:String>
-                            </Picker.Items>
-                        </Picker>
-                    </StackLayout>
-                </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Вы староста?"/>
+                            <Switch IsToggled="False"  x:Name="sw2"/>
+                        </StackLayout>
+                    </ViewCell>
 
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Вы староста?"/>
-                        <Switch IsToggled="False"  x:Name="sw2"/>
-                    </StackLayout>
-                </ViewCell>
+                    <ViewCell>
 
-                <ViewCell>
-                    
 
                         <StackLayout Orientation="Horizontal">
                             <Label Text="какая оценка "/>
                             <Label Text="2" x:Name="lb1"/>
-                        <Stepper x:Name="sl" Minimum="2"
-                                Maximum="5" Value="2" Increment="1" 
-                               ValueChanged="sl_ValueChanged_1"/>
+                            <Stepper x:Name="sl" Minimum="2"
+                            Maximum="5" Value="2" Increment="1" 
+                           ValueChanged="sl_ValueChanged_1"/>
                         </StackLayout>
-                    
-                </ViewCell>
 
-                <ViewCell>
-                    <StackLayout >
-                        <Button Text="Сохранить" Clicked="Button_Clicked"/>
-                    </StackLayout>
-                </ViewCell>
+                    </ViewCell>
 
-            </TableSection>
-        </TableRoot>
-    </TableView>
+                    <ViewCell>
+                        <StackLayout >
+                            <Button Text="Сохранить" Clicked="Button_Clicked"/>
+                        </StackLayout>
+                    </ViewCell>
+
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ScrollView>
+    
 
 </ContentPage>

@@ -10,7 +10,7 @@ namespace pract7
 	{
 		public static string fio11, name11, otchh11, nuzh11;
 		public static int age11, ozenka1;
-		public static bool sw111, sw221;
+		public static bool  sw221;
 		
 	}
 }
