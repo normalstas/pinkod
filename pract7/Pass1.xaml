@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pract7.Pass1"
+             >
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="60,200,60,100" Spacing="70">
+            <Grid>
+                <Ellipse 
+                Fill="Gray" 
+                WidthRequest="30" 
+                HeightRequest="30" 
+                HorizontalOptions="Center" 
+                 VerticalOptions="Center"
+                 x:Name="ell1" 
+            />
+            </Grid>
+            <Grid>
+                <Ellipse 
+            Fill="Gray" 
+            WidthRequest="30" 
+            HeightRequest="30" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"
+            x:Name="ell2" 
+                />
+            </Grid>
+            <Grid>
+                <Ellipse 
+             Fill="Gray" 
+            WidthRequest="30" 
+            HeightRequest="30" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"
+              x:Name="ell3"    
+            />
+            </Grid>
+        </StackLayout>
+        <StackLayout Margin="0,70,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Text="1" Clicked="Clicked1" FontSize="30" TextColor="Green" 
+                    Grid.Column="0" Grid.Row="0" x:Name="cbn1" Background="Transparent"/>
+                <Button Text="2" Clicked="Clicked2" FontSize="30" TextColor="Green" 
+     Grid.Column="1" Grid.Row="0" x:Name="cbn2" Background="Transparent"/>
+                <Button Text="3" Clicked="Clicked3" FontSize="30" TextColor="Green" 
+     Grid.Column="2" Grid.Row="0" x:Name="cbn3" Background="Transparent"/>
+                <Button Text="4" Clicked="Clicked4" FontSize="30" TextColor="Green" 
+     Grid.Column="0" Grid.Row="1" x:Name="cbn4" Background="Transparent"/>
+                <Button Text="5" Clicked="Clicked5" FontSize="30" TextColor="Green" 
+     Grid.Column="1" Grid.Row="1" x:Name="cbn5" Background="Transparent"/>
+                <Button Text="6" Clicked="Clicked6" FontSize="30" TextColor="Green" 
+     Grid.Column="2" Grid.Row="1" x:Name="cbn6" Background="Transparent"/>
+                <Button Text="7" Clicked="Clicked7" FontSize="30" TextColor="Green" 
+     Grid.Column="0" Grid.Row="2" x:Name="cbn7" Background="Transparent"/>
+                <Button Text="8" Clicked="Clicked8" FontSize="30" TextColor="Green" 
+     Grid.Column="1" Grid.Row="2" x:Name="cbn8" Background="Transparent"/>
+                <Button Text="9" Clicked="Clicked9" FontSize="30" TextColor="Green" 
+     Grid.Column="2" Grid.Row="2" x:Name="cbn9" Background="Transparent"/>
+                <Button Text="0" Clicked="Clicked0" FontSize="30" TextColor="Green" 
+     Grid.Column="1" Grid.Row="3" x:Name="cbn0" Background="Transparent"/>
+                <Button Text="zxc" Clicked="ClickedBack" FontSize="23" TextColor="Green" 
+     Grid.Column="2" Grid.Row="3" x:Name="cbnback" Background="Transparent"/>
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

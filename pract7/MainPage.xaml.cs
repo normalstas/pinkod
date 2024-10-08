@@ -2,7 +2,7 @@
 {
 	public partial class MainPage : ContentPage
 	{
-
+		
 		string fio1, name1, otchh,nuzh;
 		int age1,ozenka;
 		bool sw11, sw22;
@@ -14,7 +14,7 @@
 		public MainPage()
 		{
 			InitializeComponent();
-			
+			Navigation.PushModalAsync(new Pass1());
 		}
 		
 		
@@ -40,20 +40,23 @@
 				Save.age11 = age1;
 				sw22 = sw2.IsToggled;
 				Save.sw221 = sw22;
+				pc1.SelectedItem = "Да";
 				nuzh = pc1.SelectedItem.ToString();
 				Save.nuzh11 = nuzh;
 				ozenka = int.Parse(lb1.Text);
 				Save.ozenka1 = ozenka;
+				
 				flag = true;
-				if (selectedImageData != null)
-				{
-					// Переход на новую страницу и передача данных
-					await Navigation.PushAsync(new NewPage1(selectedImageData));
-				}
-				else
-				{
-					await DisplayAlert("Ошибка", "Сначала выберите изображение.", "OK");
-				}
+
+				//if (selectedImageData != null)
+				//{
+				//	// Переход на новую страницу и передача данных
+				//	await Navigation.PushAsync(new NewPage1(selectedImageData));
+				//}
+				//else
+				//{
+				//	await DisplayAlert("Ошибка", "Сначала выберите изображение.", "OK");
+				//}
 
 			}
 
@@ -67,31 +70,29 @@
 
 		async public void Button_Clicked_1(object sender, EventArgs e)
 		{
-			var options = new PickOptions
-			{
-				PickerTitle = "Выберите картинку",
-				FileTypes = FilePickerFileType.Images,
+			//var options = new PickOptions
+			//{
+			//	PickerTitle = "Выберите картинку",
+			//	FileTypes = FilePickerFileType.Images,
+			//};
 
+			//var result = await FilePicker.PickAsync(options);
+			//if (result != null)
+			//{
+			//	// Отображение выбранного изображения
+			//	selectedImageData = new ImageData
+			//	{
+			//		ImagePath = result.FullPath
+			//	};
+			//	img.Source = ImageSource.FromFile(result.FullPath);
+			//	await DisplayAlert("Успех", "Изображение выбрано!", "OK");
 
-			};
-
-			var result = await FilePicker.PickAsync(options);
-			if (result != null)
-			{
-				// Отображение выбранного изображения
-				selectedImageData = new ImageData
-				{
-					ImagePath = result.FullPath
-				};
-				img.Source = ImageSource.FromFile(result.FullPath);
-				await DisplayAlert("Успех", "Изображение выбрано!", "OK");
-
-			}
-			else
-			{
-				// Пользователь отменил выбор
-				await DisplayAlert("Ошибка", "Изображение не выбрано.", "OK");
-			}
+			//}
+			//else
+			//{
+			//	// Пользователь отменил выбор
+			//	await DisplayAlert("Ошибка", "Изображение не выбрано.", "OK");
+			//}
 		}
 
 
